@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	
+	
+	<body>
+		<table>
+			<tr>
+				<th>From</th>
+				<th>StartTime</th>
+				<th>To</th>
+				<th>Arrival</th>
+				<th>FlightNumber</th>
+				<th>Captain</th>
+			</tr>
+			<tr th:each="planes : ${flights.getAirplaneDtoList()}">
+				<td th:text="${planes.getStartCity()}"></td>
+				<td th:text="${planes.getStartTime()}"></td>
+				<td th:text="${planes.getEndCity()}"></td>
+				<td th:text="${planes.getEndTime()}"></td>
+				<td th:text="${planes.getFlightNumber()}"></td>
+				<td th:text="${planes.getCaptainName()}"></td>
+			</tr>		
+		</table>
+	</body>
+</html>
