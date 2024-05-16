@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	
+	
+	<body>
+		<table>
+			<tr>
+				<th>Captain name</th>
+				<th>Full flight time</th>
+			</tr>
+			<tr th:each="captains : ${captainlist.getCaptainFlightDtos()}">
+				<td th:text="${captains.getCaptainName()}"></td>
+				<td th:text="${captains.getFlightTime()}"></td>
+			</tr>
+		</table>
+	</body>
+</html>

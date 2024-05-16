@@ -15,6 +15,7 @@
 				<th>Arrival</th>
 				<th>FlightNumber</th>
 				<th>Captain</th>
+				<th>Flight Time</th>
 			</tr>
 			<tr th:each="planes : ${flights.getAirplaneDtoList()}">
 				<td th:text="${planes.getStartCity()}"></td>
@@ -23,6 +24,7 @@
 				<td th:text="${planes.getEndTime()}"></td>
 				<td th:text="${planes.getFlightNumber()}"></td>
 				<td th:text="${planes.getCaptainName()}"></td>
+				<td th:text="${planes.getFlightTime()}"></td>
 			</tr>		
 		</table>
 	</body>

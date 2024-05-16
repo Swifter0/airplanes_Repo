@@ -32,12 +32,9 @@ public class AirplaneDtoList {
 			
 			for(int secIndex = index+1; secIndex < this.airplaneDtoList.size(); secIndex++) {
 				
-				
 				AirplaneDto nextAirplaneDto = this.airplaneDtoList.get(secIndex);
-				String currentAirplaneDtoString = currentAirplaneDto.getStartTime().toString();
-				String nextAirplaneDtoString = nextAirplaneDto.getStartTime().toString();
 				
-				if(currentAirplaneDtoString.compareTo(nextAirplaneDtoString) > 0) {
+				if(currentAirplaneDto.getStartTime().isAfter(nextAirplaneDto.getStartTime())) {
 					
 					this.airplaneDtoList.set(secIndex, currentAirplaneDto);
 					this.airplaneDtoList.set(index, nextAirplaneDto);

@@ -1,5 +1,6 @@
 package hm.sb_airplanes_mvc_Homework1.dto;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class AirplaneDto {
@@ -84,10 +85,19 @@ public class AirplaneDto {
 	}
 
 
+	public Duration getFlightTime() {
+		
+		Duration result = Duration.between(startTime, endTime);
+		
+		return result;
+	}
+
+
 	@Override
 	public String toString() {
 		return "AirplaneDto [startCity=" + startCity + ", startTime=" + startTime + ", endCity=" + endCity
-				+ ", endTime=" + endTime + ", flightNumber=" + flightNumber + ", captainName=" + captainName + "]";
+				+ ", endTime=" + endTime + ", flightNumber=" + flightNumber + ", captainName=" + captainName
+				+ "]";
 	}
-	
+
 }
